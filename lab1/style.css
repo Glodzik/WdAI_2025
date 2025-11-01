@@ -1,11 +1,12 @@
 html {
-      background-color: #DDBEAA;
+      background-color: #ffddc7;
       height: 100vh;
 }
 
 body {
       height: 100vh;
-      margin: 0;
+      margin: 10;
+      font-family: 'Courier New', Courier, monospace;
 }
 
 .main-container {
@@ -15,10 +16,67 @@ body {
       justify-content: center;
 }
 
+ol a {
+      margin: 5px;
+      font-size: 18px;
+}
+
+#aCw1 {
+      color: rgb(65, 4, 15);
+}
+
+#aCw2 {
+      color: rgb(160, 74, 13);
+}
+
+#aCw3 {
+      color: rgb(135, 102, 79);
+}
+
+#autor {
+      color: rgb(236, 82, 82);
+}
+
+
 table, th, td {
       border: 2px solid black
 }
 
 table {
       border-collapse: collapse
+}
+
+th, td {
+      padding: 10px
+}
+
+
+.kwadrat {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+}
+
+#kw1 {
+      background-color: #FF8F00;
+}
+
+#kw2 {
+      background-color: #FFB300;
+}
+
+#kw3 {
+      background-color: #BF360C;
+}
+
+#kw4 {
+      background-color: #E64A19;
+}
+
+#kw5 {
+      background-color: #FF7043;
+}
+
+.wiersz {
+      display: flex;
 }
