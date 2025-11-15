@@ -1,33 +1,159 @@
 body {
-    margin: 0px 20px;
-    background-color: #B77466
+    background-color: #B77466;
+    font-family: "Playfair Display", serif;
+    font-size: large;
+    background-image: url('zdjecia/kebab.png');
+    margin: 0 5%;
 }
 
 nav {
-    display: flex;
     background-color: #FFE1AF;
-    padding: 5px
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 10px double #8b4639;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px #E2B59A;
+    color: #864e43;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    color: #864e43;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#active-link {
+    color: #8b4639;
+    text-decoration: underline;
+    background-color: #ddc498;
+    cursor: default;
+}
+
+.nav-links a:hover {
+    background-color: #ddc498;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    gap: 10px
+}
+
+main, aside, footer {
+    background-color: #E2B59A;
+    padding: 10px;
+    
+    border: 3px solid #8b4639;
+    border-radius: 15px;
+    font-family: "Montserrat";
 }
 
 main {
-    background-color: #E2B59A;
-    padding: 5px;
-    width: 70%
+    width: 70%;
+    display: flex;
+    justify-content: center;
 }
 
 aside {
-    background-color: #E2B59A;
-    padding: 5px;
-    width: 30%
+    margin: 0 0 0 5px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+
+@media (max-width: 600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 5px
+    }
+
+    main, aside {
+        width: auto;
+    }
+
+    aside {
+        margin: 0px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .nav-title, .nav-links {
+        justify-content: center;
+    }
 }
 
 footer {
-    background-color: #957C62;
-    padding: 5px
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    border: 3px solid #8b4639;
+    border-radius: 30px;
+}
+
+.icons-container img {
+    width: 40px;
+    margin-top: 8px;
+}
+
+.aside-marked-text {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+/* home.html */
+
+.main-marked-text {
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #571f14;
+}
+
+.main-ul li {
+    list-style-image: url("zdjecia/kebab1.png");
+    margin-bottom: 10px;
+}
+
+main table, table th, table tr, table td {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+.kebab-name {
+    color:#571f14;
+    font-weight: 600;
 }
