@@ -1,0 +1,33 @@
+body {
+    margin: 0px 20px;
+    background-color: #B77466
+}
+
+nav {
+    display: flex;
+    background-color: #FFE1AF;
+    padding: 5px
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+main {
+    background-color: #E2B59A;
+    padding: 5px;
+    width: 70%
+}
+
+aside {
+    background-color: #E2B59A;
+    padding: 5px;
+    width: 30%
+}
+
+footer {
+    background-color: #957C62;
+    padding: 5px
+}
