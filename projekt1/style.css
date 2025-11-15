@@ -64,21 +64,20 @@ nav {
 main, aside, footer {
     background-color: #E2B59A;
     padding: 10px;
-    
     border: 3px solid #8b4639;
     border-radius: 15px;
     font-family: "Montserrat";
 }
 
 main {
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
 }
 
 aside {
     margin: 0 0 0 5px;
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: center;
     height: fit-content;
@@ -153,7 +152,48 @@ main table, table th, table tr, table td {
     padding: 20px;
 }
 
-.kebab-name {
+table {
+    width: 100%;
+}
+
+.marked-name {
     color:#571f14;
     font-weight: 600;
+}
+
+/* galeria.html */
+
+.gallery-main {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.gallery-title {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin: 5px;
+    width: 200px;
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 150px;
+    }
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item img:hover {
+    border: 1px solid #571f14;
 }
