@@ -130,6 +130,16 @@ footer {
     font-weight: 800;
 }
 
+#clock {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Playfair Display";
+    color: #571f14;
+}
+
+
 /* home.html */
 
 .main-marked-text {
@@ -183,9 +193,17 @@ table {
     width: 200px;
 }
 
-@media (max-width: 600px) {
+video {
+    width: 400px;
+}
+
+@media (max-width: 700px) {
     .gallery-item {
         width: 150px;
+    }
+
+    video {
+        width: 200px;
     }
 }
 
@@ -196,4 +214,55 @@ table {
 
 .gallery-item img:hover {
     border: 1px solid #571f14;
+}
+
+/* kontakt.html */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-item {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form input, form select {
+    width: 50%;
+}
+
+form textarea {
+    max-width: 400px;
+    min-width: 50%;
+    min-height: 100px;
+    max-height: 400px;
+}
+
+form input, form select, form textarea {
+    border-radius: 15px;
+    border: 1px solid #571f14;
+    background-color: #FFE1AF;
+    color: #571f14;
+    font-size: 15px;
+}
+
+.submit-input {
+    margin-top: 5px;
+    padding: 10px;
+    color: #FFE1AF;
+    background-color: #571f14;
+    font-size: large;
 }

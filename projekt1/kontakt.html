@@ -26,7 +26,30 @@
 
     <div class="row">
         <main>
-            main
+            <div class="contact-container">
+                <div class="main-marked-text">
+                    Formularz kontaktowy
+                </div>
+                <div class="form-item contact-info">
+                    W razie pytań związanych z ofertą prosimy o kontakt przez poniższy formularz
+                </div>
+
+                <form onsubmit="return validateForm()">
+                    <input type="text" name="username" id="username" required placeholder="Imię i nazwisko" class="form-item">
+                    <br>
+                    <input type="text" name="email" id="email" required placeholder="Email" class="form-item">
+                    <br>
+                    <select name="reason" id="reason" required class="form-item">
+                        <option value="default">Wybierz temat wiadomości</option>
+                        <option value="question">Pytanie o produkt z oferty</option>
+                        <option value="complaint">Reklamacja</option>
+                        <option value="opinion">Opinia</option>
+                    </select>
+                    <br>
+                    <textarea name="message" id="message" required placeholder="Wiadomość" class="form-item"></textarea>
+                    <input type="submit" value="Wyślij" class="submit-input">
+                </form>                
+            </div>
         </main>
 
         <aside>
@@ -39,6 +62,15 @@
                     <li>Sb: 8:00-18:00</li>
                     <li>Nd: 11:00-18:00</li>
                 </ul>
+
+                <div id="clock-info" class="aside-marked-text">
+                    Do otwarcia:
+                </div>
+
+                <div id="clock">
+                    00:00:00
+                </div>
+
                 <div class="aside-marked-text">
                     Zobacz nasze sociale:
                 </div>
@@ -55,5 +87,7 @@
     <footer>
         Jakub Głód
     </footer>
+    
+    <script src="skrypt.js"></script>
 </body>
 </html>
