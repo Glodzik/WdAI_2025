@@ -2,13 +2,13 @@ let countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
 let clockInfoElem = document.getElementById("clock-info");
 let clockElem = document.getElementById("clock");
 
-let now = new Date();
-let year = now.getFullYear();
-let month = now.getMonth();
-let day = now.getDate();
-let hour = now.getHours();
+let nowDate = new Date();
+let year = nowDate.getFullYear();
+let month = nowDate.getMonth();
+let day = nowDate.getDate();
 
-let weekDay = now.getDay();
+let hour = nowDate.getHours();
+let weekDay = nowDate.getDay();
 let clockInfo = "";
 
 // Nd po 18 || Pn-Pt po 20
@@ -17,7 +17,7 @@ if ((weekDay == 0 && hour >= 18 ) || (weekDay >= 1 && weekDay <= 5 && hour >= 20
     countDownDate = new Date(year, month, day+1, 8);
 }
 // Sb po 18
-else if(weekDay == 6 && hours >= 18) {
+else if(weekDay == 6 && hour >= 18) {
     clockInfo = "Do otwarcia:";
     countDownDate = new Date(year, month, day+1, 11);
 } 
@@ -30,21 +30,33 @@ else if(weekDay >= 1 && weekDay <= 5 && hour >= 8 && hour <= 19) {
 else if((weekDay == 6 && hour >= 8 && hour <= 17) || (weekDay == 0 && hour >= 11 && hour <= 17)) {
     clockInfo = "Do zamknięcia:";
     countDownDate = new Date(year, month, day, 18);
+} 
+// Pn-Sb 0-8
+else if(weekDay >= 1 && weekDay <= 6 && hour <= 7) {
+    clockInfo = "Do otwarcia:";
+    countDownDate = new Date(year, month, day, 8);
+}
+// Nd 0-11
+else if(weekDay == 0 && hour <= 10) {
+    clockInfo = "Do otwarcia:";
+    countDownDate = new Date(year, month, day, 11);
 }
 
 let x = setInterval(function() {
-  let now = new Date().getTime();
+    let now = new Date().getTime();
 
-  let distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("clock").innerHTML = hours + ":"
-  + minutes + ":" + seconds;
-  document.getElementById("clock-info").innerHTML = clockInfo
-  
+    if(hours < 10) hours = "0" + hours;
+    if(minutes < 10) minutes = "0" + minutes;
+    if(seconds < 10) seconds = "0" + seconds;
+
+    document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("clock-info").innerHTML = clockInfo
 }, 1000);
 
 function validateForm() {
