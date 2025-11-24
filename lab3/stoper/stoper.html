@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoper</title>
+    <style>
+        #stoper {
+            font-size: 40px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+        #start {
+            background-color: green;
+        }
+
+        #stop {
+            background-color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()">Stop</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <br>
+    <br>
+    <div id="stoper">0s</div>
+
+    <script src="stoper.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty</title>
+    <style>
+        #row {
+            display: flex;
+            gap: 5px;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+        }
+
+        select {
+            width: 30%;
+        }
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        #photoTh {
+            width: 15%;
+        }
+
+        #titleTh {
+            width: 20%;
+        }
+
+        #describionTh {
+            width: 65%;
+        }
+
+        img {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="row">
+        <input type="text" id="filter" placeholder="Wyszukaj...">
+        <select id="sortOrder">
+            <option value="default">Oryginalna kolejność</option>
+            <option value="asc">Rosnąco</option>
+            <option value="desc">Malejąco</option>
+        </select>
+    </div>
+    <br>
+    <table id="products">
+        <tr>
+            <th id="photoTh">Zdjęcie</th>
+            <th id="titleTh">Tytuł</th>
+            <th id="describtionTh">Opis</th>
+        </tr>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="produkty.js"></script>
+</body>
+</html>
